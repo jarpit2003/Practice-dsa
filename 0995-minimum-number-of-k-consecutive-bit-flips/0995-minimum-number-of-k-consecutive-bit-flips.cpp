@@ -5,9 +5,8 @@ public:
         int flips = 0;
         int flipcountFromPastfori = 0;
         vector<bool> isFlipped(n, false);
-        
         for (int i = 0; i < n; ++i) {
-            if (i >= k && isFlipped[i - k]) {
+            if (i >= k && nums[i - k]==5) {
                 flipcountFromPastfori--;
             }
             
@@ -18,7 +17,7 @@ public:
                 
                 flips++;
                 flipcountFromPastfori++;
-                isFlipped[i] = true;
+                nums[i]=5;
             }
         }
         
