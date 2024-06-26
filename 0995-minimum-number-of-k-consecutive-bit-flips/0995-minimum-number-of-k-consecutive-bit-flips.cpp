@@ -3,24 +3,23 @@ public:
     int minKBitFlips(vector<int>& nums, int k) {
         int n = nums.size();
         int flips = 0;
-        int flipcountFromPastfori = 0;
-        vector<bool> isFlipped(n, false);
+        int flipcountbeforei = 0;
+        vector<bool> isflipped(n, false);
+
         for (int i = 0; i < n; ++i) {
-            if (i >= k && nums[i - k]==5) {
-                flipcountFromPastfori--;
+            if (i >= k && isflipped[i - k]) {
+                flipcountbeforei--;
             }
-            
-            if ((flipcountFromPastfori % 2 == 0 && nums[i] == 0) || (flipcountFromPastfori % 2 == 1 && nums[i] == 1)) {
+
+            if ((flipcountbeforei % 2) == nums[i]) {
                 if (i + k > n) {
                     return -1;
                 }
-                
+                flipcountbeforei++;
                 flips++;
-                flipcountFromPastfori++;
-                nums[i]=5;
+                isflipped[i] = true;
             }
         }
-        
         return flips;
     }
 };
