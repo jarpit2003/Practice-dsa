@@ -1,13 +1,22 @@
 
-
 class Solution {
 public:
     int findGCD(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
         int min_value = nums[0];
-        int max_value = nums.back();
-        int gcd = calculateGCD(min_value, max_value);
-        return static_cast<int>(gcd);
+        int max_value = nums[0];
+        
+        // Finding min and max values: O(n)
+        for (int num : nums) {
+            if (num < min_value) {
+                min_value = num;
+            }
+            if (num > max_value) {
+                max_value = num;
+            }
+        }
+        
+        int gcd = calculateGCD(min_value, max_value); // O(log(min_value + max_value))
+        return gcd;
     }
 
 private:
@@ -22,3 +31,5 @@ private:
         return (A == 0) ? B : A;
     }
 };
+
+
