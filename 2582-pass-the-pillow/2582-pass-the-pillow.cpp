@@ -2,20 +2,15 @@ class Solution {
 public:
     int passThePillow(int n, int time) 
     {
-        int direction = 1;
-        int position = 1;
-        for(int i =0;i<time;i++)
+        int fullrounds = time/(n-1);
+        int remainder = time %(n-1);
+        if(fullrounds%2==0)
         {
-            if(position==1)
-            {
-                direction = 1;
-            }
-            else if(position == n)
-            {
-                direction = -1;
-            }
-            position+=direction;
+           return remainder+1;
         }
-        return position;
+        else
+        {
+            return n-remainder;
+        }
     }
 };
