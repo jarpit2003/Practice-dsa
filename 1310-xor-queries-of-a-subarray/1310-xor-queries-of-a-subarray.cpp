@@ -8,7 +8,7 @@ public:
             cumXor[i] = cumXor[i-1]^arr[i];
         }
         vector<int> result;
-        
+        result.reserve(queries.size());
         for (const auto& query : queries) {
             int temp1 = query[0];
             int temp2 = query[1];
