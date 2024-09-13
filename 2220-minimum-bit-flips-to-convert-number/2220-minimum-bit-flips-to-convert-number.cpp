@@ -1,8 +1,15 @@
 class Solution {
 public:
     int minBitFlips(int start, int goal) {
-        /*traverse where there is achange there make a chnge increase the count*/
-       int xorResult = start ^goal;
-        return __builtin_popcount(xorResult);
+        int xorResult = start ^ goal;
+        int count = 0;
+
+        // Count the number of set bits (1s) manually
+        while (xorResult > 0) {
+            count += (xorResult & 1); // Increment count if the least significant bit is 1
+            xorResult >>= 1;          // Right shift to process the next bit
+        }
+
+        return count;
     }
 };
