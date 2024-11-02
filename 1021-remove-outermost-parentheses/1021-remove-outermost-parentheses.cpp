@@ -8,14 +8,14 @@ public:
         }
         else
         {
-           stack<char>st;
+           int count = 0;
             string res = "";
             for(int i =0;i<n;i++)
             {
-              
-                if(s[i]==')'){st.pop();}
-                if(!st.empty()){res.push_back(s[i]);}
-                  if(s[i]=='('){st.push(s[i]);}
+                
+                  if(s[i]==')'){count--;}
+                if(count!=0){res.push_back(s[i]);}
+              if(s[i]=='('){count++;}
             }
         return res;
         }
