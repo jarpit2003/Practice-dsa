@@ -8,18 +8,13 @@ public:
      {
          if(s[i]=='(')
          {
-             count++;
-             
-             ans = max(ans,count);
+             count++;      
          }
          if(s[i]==')')
          {
-          count--;
-             
+          count--;        
          }
-          if (count < 0) {
-                    count = 0; 
-                }
+          ans = max(ans,count);
      }
         return ans;
     }
