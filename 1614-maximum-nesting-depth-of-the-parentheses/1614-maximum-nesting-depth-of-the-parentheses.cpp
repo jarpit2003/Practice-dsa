@@ -17,6 +17,9 @@ public:
           count--;
              
          }
+          if (count < 0) {
+                    count = 0; 
+                }
      }
         return ans;
     }
