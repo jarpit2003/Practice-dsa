@@ -11,7 +11,6 @@
 class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-     int i = 0;
      if(root==NULL) return NULL;
      if(root->val>p->val&&root->val>q->val)
      {  
