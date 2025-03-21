@@ -1,29 +1,20 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
 class Solution {
 public:
-    TreeNode*traverse(TreeNode*root,int &k)
-    {
-        if(root==NULL) return new TreeNode(k);
-       else if(root->val>k) root->left = traverse(root->left,k);
-       else if(root->val<k) root->right = traverse(root->right,k);
-       return root;
-    }
-    TreeNode* bstFromPreorder(vector<int>& preorder) {
-        TreeNode* root = NULL;
-        for(int i = 0 ;i<preorder.size();i++)
-        {
-          root = traverse(root,preorder[i]);
-        }
+    int index = 0;  // Global index to track position in preorder array
+
+    TreeNode* buildBST(vector<int>& preorder, int upperBound) {
+        if (index >= preorder.size() || preorder[index] > upperBound) 
+            return NULL;  // Stop if index is out of bounds or value exceeds limit
+
+        TreeNode* root = new TreeNode(preorder[index++]);  // Create new node
+
+        root->left = buildBST(preorder, root->val);   // Left subtree (values < root)
+        root->right = buildBST(preorder, upperBound); // Right subtree (values > root)
+
         return root;
+    }
+
+    TreeNode* bstFromPreorder(vector<int>& preorder) {
+        return buildBST(preorder, INT_MAX);  // Call function with max boundary
     }
 };
