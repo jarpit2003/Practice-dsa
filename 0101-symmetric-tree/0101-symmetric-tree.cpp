@@ -11,19 +11,15 @@
  */
 class Solution {
 public:
-    bool solve(TreeNode*root1,TreeNode*root2)
-    {
-        if(root1==NULL||root2==NULL)
-        {
-            return root1==root2;
-        }
-        return root1->val==root2->val&&solve(root1->left,root2->right)&&solve(root1->right,root2->left);
-    }
+bool system(TreeNode* p, TreeNode* q) {
+    if (p == NULL && q == NULL) return true;  // Both nodes are NULL, symmetric
+    if (p == NULL || q == NULL) return false;  // One node is NULL, not symmetric
+    if (p->val != q->val) return false;  // Values don't match, not symmetric   
+    // Recursively check left and right subtrees
+    return system(p->left, q->right) && system(p->right, q->left);
+}
     bool isSymmetric(TreeNode* root) {
-        if(root==NULL)
-        {
-            return true;
-        }
-        return solve(root->left,root->right);
+        if(root==NULL) return true;
+        return system(root->left,root->right);
     }
 };
