@@ -1,7 +1,7 @@
 class Solution {
 public:
-typedef pair<int,int>p;
-vector<vector<int>>directions{{-1,0},{1,0},{0,-1},{0,1}};
+    typedef pair<int,int>p;
+    vector<vector<int>>directions{{1,0},{-1,0},{0,1},{0,-1}} ;
     int orangesRotting(vector<vector<int>>& grid) {
         int m = grid.size();
         int n = grid[0].size();
@@ -21,31 +21,31 @@ vector<vector<int>>directions{{-1,0},{1,0},{0,-1},{0,1}};
                 }
             }
         }
-        if(freshcount == 0) return 0;
-        int minutes = 0;
-        while(!q.empty())
+         if(freshcount == 0) return 0;
+         int minutes = 0;
+          while(!q.empty())
         {
             int N = q.size();
             while(N--)
             {
-             p curr =q.front();
-             q.pop();
-             int i = curr.first;
-             int j = curr.second;
-             for(vector<int>&dir:directions)
-             {
-                int new_i = i+dir[0];
-                int new_j = j+dir[1];
-                if(new_i >= 0 && new_i <m && new_j >= 0 && new_j < n && grid[new_i][new_j]==1)
+              p curr = q.front();
+              q.pop();
+              int i = curr.first;
+              int j = curr.second;
+              for(vector<int>&dir:directions)
+              {
+                int new_i = i + dir[0];
+                int new_j = j + dir[1];
+                if(new_i>=0&&new_i<m&&new_j>=0&&new_j<n&&grid[new_i][new_j]==1)
                 {
                     grid[new_i][new_j] = 2;
                     q.push({new_i,new_j});
                     freshcount--;
                 }
-             }
+              }
             }
             minutes++;
         }
-        return freshcount == 0? (minutes-1) : -1;
+        return freshcount == 0 ? minutes-1:-1;
     }
 };
