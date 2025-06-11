@@ -1,44 +1,35 @@
 class Solution {
 public:
+vector<vector<int>>directions={{-1,-1},{-1,0},{-1,1},{0,1},{1,1},{1,0},{1,-1},{0,-1}};
+typedef pair<int,pair<int,int>>P;
     int shortestPathBinaryMatrix(vector<vector<int>>& grid) {
-      //convert grid to graph using adjmatrix
-      //ekc ount dexlare karo shortest ke liye
-      //source i,j declare karo
-      //dir banao diectionke liye  
-      //loop bnao aur add karte jao pehle comapre karo ki bhai newi,newj ha vo 0 ha bhi ya ni agar ho toh usko na i+j ki form me max se store karvaolo jisnka sum max aaye usko leo
-      //subsitut eko kardo vo i aur j ko naye vaale se
-      //count++
-      //return lkaro kya count
-      //vector<vector<int>>adj[][] = grid;
-      int n = grid.size();
-      if (grid[0][0] != 0 || grid[n-1][n-1] != 0) return -1;
-    vector<vector<int>>directions={{-1,-1},{-1,0},{-1,1},{0,1},{1,1},{1,0},{1,-1},{0,-1}};
-    if(grid[0][0]!=0) return -1;
-    if (n == 1 && grid[0][0] == 0) return 1;
-    queue<pair<int, int>>q;
-    q.push({0,0});
-    grid[0][0] = 1;
-   
-    while(!q.empty())
-    {
-        auto[x,y] = q.front();
-        int dist = grid[x][y];
-        q.pop();
-        for(auto&dir:directions)
+        int m =grid.size();
+        int n = grid[0].size();
+        if(n==0||m==0||grid[n-1][m-1]!=0||grid[0][0]!=0) return -1;
+        vector<vector<int>>result(n,vector<int>(n,1e9));
+        priority_queue<P,vector<P>,greater<P>>pq;
+        pq.push({0,{0,0}});
+        result[0][0] = 0;
+        while(!pq.empty())
         {
-            int newx = x+dir[0];
-            int newy = y+dir[1];
-            if(newx==n-1&&newy==n-1)
+            int d = pq.top().first;
+            pair<int,int>node = pq.top().second;
+            int x = node.first;
+            int y = node.second;
+            pq.pop();
+            for(auto dir : directions)
             {
-                return dist+1;
-            }
-            if(newx>=0&&newy>=0&&newx<n&&newy<n&&grid[newx][newy]==0)
-            {
-                q.push({newx,newy});
-                grid[newx][newy] = dist + 1; 
+                int newx = x+dir[0];
+                int newy = y+dir[1];
+                int dist = 1;
+                if(newx>=0&&newx<n&&newy>=0&&newy<m&&grid[newx][newy]==0&&d+dist<result[newx][newy])
+                {
+                    pq.push({d+dist,{newx,newy}});
+                    result[newx][newy] = d+dist;
+                }
             }
         }
-    }
-     return -1;
+        if(result[n-1][m-1]==INT_MAX) return -1;
+        return result[n-1][m-1]+1;
     }
 };
