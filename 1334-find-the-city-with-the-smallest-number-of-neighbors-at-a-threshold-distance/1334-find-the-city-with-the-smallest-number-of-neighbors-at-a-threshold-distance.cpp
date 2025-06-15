@@ -1,51 +1,45 @@
 class Solution {
 public:
     int findTheCity(int n, vector<vector<int>>& edges, int distanceThreshold) {
-        // Initialize the distance matrix
-        vector<vector<int>> dist(n, vector<int>(n, INT_MAX));
-        
-        // Distance from a city to itself is 0
-        for (int i = 0; i < n; ++i) {
-            dist[i][i] = 0;
-        }
+        vector<vector<int>> matrix(n, vector<int>(n, 1e9));
 
-        // Fill initial distances from the given edges
-        for (const auto& edge : edges) {
-            int u = edge[0], v = edge[1], w = edge[2];
-            dist[u][v] = w;
-            dist[v][u] = w;
+        // Initialize distances
+        for (int i = 0; i < n; ++i) matrix[i][i] = 0;
+
+        for (auto& edge : edges) {
+            int u = edge[0];
+            int v = edge[1];
+            int wt = edge[2];
+            matrix[u][v] = wt;
+            matrix[v][u] = wt;  // Undirected
         }
 
         // Floyd-Warshall algorithm
-        for (int k = 0; k < n; ++k) {
+        for (int via = 0; via < n; ++via) {
             for (int i = 0; i < n; ++i) {
                 for (int j = 0; j < n; ++j) {
-                    if (dist[i][k] != INT_MAX && dist[k][j] != INT_MAX) {
-                        dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
-                    }
+                    if (matrix[i][via] != 1e9 && matrix[via][j] != 1e9)
+                        matrix[i][j] = min(matrix[i][j], matrix[i][via] + matrix[via][j]);
                 }
             }
         }
 
-        // Find the city with the smallest number of reachable cities within the distanceThreshold
-        int minReachableCities = INT_MAX;
-        int resultCity = -1;
+        int minReachable = n;  // Max possible
+        int city = -1;
 
         for (int i = 0; i < n; ++i) {
-            int reachableCities = 0;
+            int count = 0;
             for (int j = 0; j < n; ++j) {
-                if (i != j && dist[i][j] <= distanceThreshold) {
-                    ++reachableCities;
-                }
+                if (i != j && matrix[i][j] <= distanceThreshold)
+                    count++;
             }
-
-            // If current city has fewer reachable cities, or in case of a tie, prefer the larger city index
-            if (reachableCities < minReachableCities || (reachableCities == minReachableCities && i > resultCity)) {
-                minReachableCities = reachableCities;
-                resultCity = i;
+            // If multiple cities have the same number of reachable cities, return the greatest number
+            if (count <= minReachable) {
+                minReachable = count;
+                city = i;
             }
         }
 
-        return resultCity;
+        return city;
     }
 };
