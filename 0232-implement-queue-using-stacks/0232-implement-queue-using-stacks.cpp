@@ -11,45 +11,39 @@ stack<int>st2;
     }
     
     int pop() {
-        if(st1.empty()) return -1;
+        if(empty()) return -1;
+       if(st2.empty())
+       {
        while(!st1.empty())
         {
             int topa = st1.top();
             st1.pop();
             st2.push(topa);
         }
+       }
         int ans= st2.top();
         st2.pop();
-        while(!st2.empty())
-        {
-            int topa = st2.top();
-            st2.pop();
-            st1.push(topa);
-        }
         return ans;
     }
     
     int peek() {
-        if(st1.empty()) return -1;
+        if(empty()) return -1;
+        if(st2.empty())
+        {
         while(!st1.empty())
         {
             int topa = st1.top();
             st1.pop();
             st2.push(topa);
         }
-        int ans = st2.top();
-        while(!st2.empty())
-        {
-            int topa = st2.top();
-            st2.pop();
-            st1.push(topa);
         }
+        int ans = st2.top();
         return ans;
     }
     
     bool empty() {
-        if(st1.empty()) return  true;
-        return false;
+        
+        return st1.empty()&&st2.empty();
     }
 };
 
