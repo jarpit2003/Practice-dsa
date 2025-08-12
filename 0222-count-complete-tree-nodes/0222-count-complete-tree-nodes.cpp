@@ -11,18 +11,34 @@
  */
 class Solution {
 public:
-    void countingnode(TreeNode*root,int &count)
-    {
-        if(root == NULL) return;
-        if(root!=NULL) count++;
-        countingnode(root->left,count);
-        countingnode(root->right,count);
-    }
     int countNodes(TreeNode* root) {
-        int count = 0;
         if(root==NULL) return 0;
-        if(root->left==NULL&&root->right==NULL) return 1;
-        countingnode(root,count);
-        return count;
+        int lh = leftcount(root);
+        int rh = rightcount(root);
+        if(lh==rh)
+        {
+            return (1<<lh)-1;
+        }
+        return 1+countNodes(root->left)+countNodes(root->right);
+    }
+    int leftcount(TreeNode* root)
+    {
+      int h = 0;
+      while(root!=NULL)
+      {
+        root = root->left;
+        h++;
+      }
+      return h;
+    }
+    int rightcount(TreeNode* root)
+    {
+ int h = 0;
+      while(root!=NULL)
+      {
+        root = root->right;
+        h++;
+      }
+      return h;
     }
 };
