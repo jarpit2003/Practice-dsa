@@ -1,38 +1,38 @@
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
 class Solution {
 public:
-    vector<vector<int>> verticalTraversal(TreeNode* root) {
-        // This will store the result
-        vector<vector<int>> ans;
-        // Map to store nodes by columns, each column stores pairs of (row, value)
-        map<int, vector<pair<int, int>>> mp;
-        
-        // Start DFS traversal with initial column 0 and row 0
-        dfs(root, 0, 0, mp);
-        
-        // Extract and sort the values for each column
-        for (auto& [col, nodes] : mp) {
-            sort(nodes.begin(), nodes.end()); // Sort by row first, then value
-            vector<int> columnValues;
-            for (auto& [row, val] : nodes) {
-                columnValues.push_back(val);
-            }
-            ans.push_back(columnValues);
-        }
-        
-        return ans;
+    void dfs(TreeNode*root,int col,int row, map<int,vector<pair<int,int>>>&mp)
+    {
+        if(root == NULL) return;
+        mp[col].push_back(make_pair(row,root->val));
+        if(root->left)dfs(root->left,col-1,row+1,mp);
+        if(root->right)dfs(root->right,col+1,row+1,mp);
     }
-
-private:
-    void dfs(TreeNode* node, int row, int col, map<int, vector<pair<int, int>>>& mp) {
-        if (node == nullptr) {
-            return;
+    vector<vector<int>> verticalTraversal(TreeNode* root) {
+        vector<vector<int>>ans;
+        map<int,vector<pair<int,int>>>mp;
+        dfs(root,0,0,mp);
+        for(auto it = mp.begin();it!=mp.end();it++)
+        {
+            auto nodes = it->second;
+            sort(nodes.begin(),nodes.end());
+            vector<int>temp;
+            for(auto j:nodes)
+            {
+                temp.push_back(j.second);
+            }
+            ans.push_back(temp);
         }
-        
-        // Insert the node value along with its row into the map
-        mp[col].push_back({row, node->val});
-        
-        // Recursively traverse left and right children
-        dfs(node->left, row + 1, col - 1, mp);  // left child goes to col-1
-        dfs(node->right, row + 1, col + 1, mp); // right child goes to col+1
+        return ans;
     }
 };
