@@ -5,7 +5,6 @@ vector<vector<int>>dir = {{-1,0},{0,-1},{1,0},{0,1}};
     vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
         int m = mat.size();
         int n = mat[0].size();
-        vector<vector<int>>dist(m,vector<int>(n, INT_MAX));
         queue<p>q;
         for (int i =0;i<m;i++)
         {
@@ -13,9 +12,9 @@ vector<vector<int>>dir = {{-1,0},{0,-1},{1,0},{0,1}};
             {
                 if(mat[i][j]==0)  
                 {
-                dist[i][j] = 0;
                 q.push({i,j});
-                }            
+                }  
+                else mat[i][j] = -1;          
             }
         }
        while(!q.empty())
@@ -28,16 +27,14 @@ vector<vector<int>>dir = {{-1,0},{0,-1},{1,0},{0,1}};
         {
             int newi = i+di[0];
             int newj = j+di[1];
-            if(newi>=0&&newj>=0&&newi<m&&newj<n)
+            if(newi>=0&&newj>=0&&newi<m&&newj<n&&mat[newi][newj]==-1)
             {
-                  if(dist[newi][newj]>dist[i][j])
-                  {
-                    dist[newi][newj] = dist[i][j]+1;
+                  
+                    mat[newi][newj] = mat[i][j]+1;
                     q.push({newi,newj});
                   }
             }
-        }
-       }      
-        return dist;
+        }     
+        return mat;
     }
 };
