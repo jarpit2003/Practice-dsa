@@ -7,9 +7,10 @@ typedef pair<int,int>p;
         int n = image[0].size();
         int col = image[sr][sc];
         image[sr][sc] = color;
+        if (col == color) return image;
         queue<p>q;
         q.push({sr,sc});
-               if (col == color) return image;
+               
         while(!q.empty())
         {
             int N = q.size();
