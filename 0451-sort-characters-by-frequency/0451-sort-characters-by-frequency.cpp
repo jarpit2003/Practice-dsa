@@ -1,29 +1,16 @@
 class Solution {
 public:
     string frequencySort(string s) {
-        if(s.empty())
+        int freq[128];
+        for(char c:s)
         {
-            return "";
+            freq[c]++;
         }
-        else
-        {
-        unordered_map<char,int>map;
-            for(int i =0;i<s.length();i++)
-            {
-              map[s[i]]++;
-            }
-            sort(s.begin(),s.end(),[&map](char a , char b) {
-                if(map[a]==map[b])
-                {
-                    return a>b;
-                }
-                else
-                {
-                    return map[a]>map[b];
-                }
-               
-            });
-             return s;
-        }
+        sort(s.begin(),s.end(),[&](char a, char b)
+         { if(freq[a]==freq[b]) return a>b;
+           return freq[a]>freq[b];
+         }
+        );
+        return s;
     }
 };
