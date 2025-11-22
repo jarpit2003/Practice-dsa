@@ -11,14 +11,14 @@
  */
 class Solution {
 public:
-int maxsum = 0;
+int maxsum = INT_MIN;
 int depth(TreeNode*root)
 {
     if (root==NULL) return 0;
-    int leftnode = depth(root->left);
-    int rightnode = depth(root->right);
+    int leftnode = max(0,depth(root->left));
+    int rightnode = max(0,depth(root->right));
     maxsum = max(maxsum,leftnode+rightnode+root->val);
-    return root->val;
+    return root->val+max(leftnode,rightnode);
 }
     int maxPathSum(TreeNode* root) {
         depth(root);
