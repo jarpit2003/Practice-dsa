@@ -1,15 +1,14 @@
 class Solution {
 public:
+int maxsum = 0;
     int maxProfit(vector<int>& prices) {
-        int maxdif = 0;
-        int n = prices.size();
-        for(int i = 0;i<n;i++)
+        for(int i =0;i<prices.size();i++)
         {
-            for(int j = i+1 ;j<n;j++)
+            for(int j = i+1 ;j<prices.size();j++)
             {
-                maxdif = max(maxdif,(prices[j]-prices[i]));
+                maxsum = max(maxsum,prices[j]-prices[i]);
             }
         }
-        return maxdif;
+        return maxsum;
     }
 };
