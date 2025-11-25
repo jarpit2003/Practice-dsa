@@ -1,31 +1,24 @@
 class Solution {
 public:
     int countSubstrings(string s) {
-        int n = (int)s.size();
-        if(n == 0) return 0;
-        int ans = 0;
-        for(int c = 0;c<n;c++)
+       int n = s.size();
+       int cnt = 0;
+       for(int center = 0;center<n;center++)
+       {
+        cnt+=expand(s,center,center);
+        cnt+=expand(s,center,center+1);
+       }
+       return cnt;
+    }
+    int expand(string &s,int left,int right)
+    {
+        int cnt  = 0;
+        while(left>=0&&right<s.size()&&s[left]==s[right])
         {
-            int l = c;
-            int r = c;
-            while(l<=r&&l>=0&&r<n&&s[l]==s[r])
-            {
-                 ans++;
-                 l--;
-                 r++;
-            }
+            cnt++;
+            left--;
+            right++;
         }
-        for(int c = 0;c<n;c++)
-        {
-            int l = c;
-            int r = c+1;
-            while(l<=r&&l>=0&&r<n&&s[l]==s[r])
-            {
-                 ans++;
-                 l--;
-                 r++;
-            }
-        }
-        return ans;
+        return cnt;
     }
 };
