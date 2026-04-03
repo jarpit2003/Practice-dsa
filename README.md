@@ -21,6 +21,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0056-merge-intervals](https://github.com/jarpit2003/Practice-dsa/tree/main/0056-merge-intervals/) | Medium |
+| [0198-house-robber](https://github.com/jarpit2003/Practice-dsa/tree/main/0198-house-robber/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/jarpit2003/Practice-dsa/tree/main/0560-subarray-sum-equals-k/) | Medium |
 ## Prefix Sum
 | Problem Name | Difficulty |
@@ -55,4 +56,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0102-binary-tree-level-order-traversal](https://github.com/jarpit2003/Practice-dsa/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0198-house-robber](https://github.com/jarpit2003/Practice-dsa/tree/main/0198-house-robber/) | Medium |
 <!---LeetCode Topics End-->
