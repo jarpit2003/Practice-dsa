@@ -24,4 +24,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0560-subarray-sum-equals-k](https://github.com/jarpit2003/Practice-dsa/tree/main/0560-subarray-sum-equals-k/) | Medium |
+## Linked List
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0206-reverse-linked-list](https://github.com/jarpit2003/Practice-dsa/tree/main/0206-reverse-linked-list/) | Easy |
+## Recursion
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0206-reverse-linked-list](https://github.com/jarpit2003/Practice-dsa/tree/main/0206-reverse-linked-list/) | Easy |
 <!---LeetCode Topics End-->
