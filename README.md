@@ -19,6 +19,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0056-merge-intervals](https://github.com/jarpit2003/Practice-dsa/tree/main/0056-merge-intervals/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/jarpit2003/Practice-dsa/tree/main/0560-subarray-sum-equals-k/) | Medium |
 ## Prefix Sum
 | Problem Name | Difficulty |
@@ -32,4 +33,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0206-reverse-linked-list](https://github.com/jarpit2003/Practice-dsa/tree/main/0206-reverse-linked-list/) | Easy |
+## Sorting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0056-merge-intervals](https://github.com/jarpit2003/Practice-dsa/tree/main/0056-merge-intervals/) | Medium |
 <!---LeetCode Topics End-->
