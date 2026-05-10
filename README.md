@@ -20,6 +20,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0042-trapping-rain-water](https://github.com/jarpit2003/Practice-dsa/tree/main/0042-trapping-rain-water/) | Hard |
 | [0053-maximum-subarray](https://github.com/jarpit2003/Practice-dsa/tree/main/0053-maximum-subarray/) | Medium |
 | [0056-merge-intervals](https://github.com/jarpit2003/Practice-dsa/tree/main/0056-merge-intervals/) | Medium |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/jarpit2003/Practice-dsa/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
@@ -45,6 +46,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0042-trapping-rain-water](https://github.com/jarpit2003/Practice-dsa/tree/main/0042-trapping-rain-water/) | Hard |
 | [0141-linked-list-cycle](https://github.com/jarpit2003/Practice-dsa/tree/main/0141-linked-list-cycle/) | Easy |
 ## Tree
 | Problem Name | Difficulty |
@@ -61,6 +63,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0042-trapping-rain-water](https://github.com/jarpit2003/Practice-dsa/tree/main/0042-trapping-rain-water/) | Hard |
 | [0053-maximum-subarray](https://github.com/jarpit2003/Practice-dsa/tree/main/0053-maximum-subarray/) | Medium |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/jarpit2003/Practice-dsa/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0198-house-robber](https://github.com/jarpit2003/Practice-dsa/tree/main/0198-house-robber/) | Medium |
@@ -68,4 +71,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0053-maximum-subarray](https://github.com/jarpit2003/Practice-dsa/tree/main/0053-maximum-subarray/) | Medium |
+## Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0042-trapping-rain-water](https://github.com/jarpit2003/Practice-dsa/tree/main/0042-trapping-rain-water/) | Hard |
+## Monotonic Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0042-trapping-rain-water](https://github.com/jarpit2003/Practice-dsa/tree/main/0042-trapping-rain-water/) | Hard |
 <!---LeetCode Topics End-->
