@@ -25,6 +25,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0042-trapping-rain-water](https://github.com/jarpit2003/Practice-dsa/tree/main/0042-trapping-rain-water/) | Hard |
 | [0053-maximum-subarray](https://github.com/jarpit2003/Practice-dsa/tree/main/0053-maximum-subarray/) | Medium |
 | [0056-merge-intervals](https://github.com/jarpit2003/Practice-dsa/tree/main/0056-merge-intervals/) | Medium |
+| [0080-remove-duplicates-from-sorted-array-ii](https://github.com/jarpit2003/Practice-dsa/tree/main/0080-remove-duplicates-from-sorted-array-ii/) | Medium |
 | [0088-merge-sorted-array](https://github.com/jarpit2003/Practice-dsa/tree/main/0088-merge-sorted-array/) | Easy |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/jarpit2003/Practice-dsa/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0198-house-robber](https://github.com/jarpit2003/Practice-dsa/tree/main/0198-house-robber/) | Medium |
@@ -53,6 +54,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0026-remove-duplicates-from-sorted-array](https://github.com/jarpit2003/Practice-dsa/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
 | [0027-remove-element](https://github.com/jarpit2003/Practice-dsa/tree/main/0027-remove-element/) | Easy |
 | [0042-trapping-rain-water](https://github.com/jarpit2003/Practice-dsa/tree/main/0042-trapping-rain-water/) | Hard |
+| [0080-remove-duplicates-from-sorted-array-ii](https://github.com/jarpit2003/Practice-dsa/tree/main/0080-remove-duplicates-from-sorted-array-ii/) | Medium |
 | [0088-merge-sorted-array](https://github.com/jarpit2003/Practice-dsa/tree/main/0088-merge-sorted-array/) | Easy |
 | [0141-linked-list-cycle](https://github.com/jarpit2003/Practice-dsa/tree/main/0141-linked-list-cycle/) | Easy |
 ## Tree
