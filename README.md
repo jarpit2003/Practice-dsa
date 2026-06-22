@@ -8,6 +8,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/jarpit2003/Practice-dsa/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0141-linked-list-cycle](https://github.com/jarpit2003/Practice-dsa/tree/main/0141-linked-list-cycle/) | Easy |
+| [0169-majority-element](https://github.com/jarpit2003/Practice-dsa/tree/main/0169-majority-element/) | Easy |
 | [0560-subarray-sum-equals-k](https://github.com/jarpit2003/Practice-dsa/tree/main/0560-subarray-sum-equals-k/) | Medium |
 ## String
 | Problem Name | Difficulty |
@@ -28,6 +29,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/jarpit2003/Practice-dsa/tree/main/0080-remove-duplicates-from-sorted-array-ii/) | Medium |
 | [0088-merge-sorted-array](https://github.com/jarpit2003/Practice-dsa/tree/main/0088-merge-sorted-array/) | Easy |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/jarpit2003/Practice-dsa/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
+| [0169-majority-element](https://github.com/jarpit2003/Practice-dsa/tree/main/0169-majority-element/) | Easy |
 | [0198-house-robber](https://github.com/jarpit2003/Practice-dsa/tree/main/0198-house-robber/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/jarpit2003/Practice-dsa/tree/main/0560-subarray-sum-equals-k/) | Medium |
 ## Prefix Sum
@@ -48,6 +50,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0056-merge-intervals](https://github.com/jarpit2003/Practice-dsa/tree/main/0056-merge-intervals/) | Medium |
 | [0088-merge-sorted-array](https://github.com/jarpit2003/Practice-dsa/tree/main/0088-merge-sorted-array/) | Easy |
+| [0169-majority-element](https://github.com/jarpit2003/Practice-dsa/tree/main/0169-majority-element/) | Easy |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -80,6 +83,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0053-maximum-subarray](https://github.com/jarpit2003/Practice-dsa/tree/main/0053-maximum-subarray/) | Medium |
+| [0169-majority-element](https://github.com/jarpit2003/Practice-dsa/tree/main/0169-majority-element/) | Easy |
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -88,4 +92,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0042-trapping-rain-water](https://github.com/jarpit2003/Practice-dsa/tree/main/0042-trapping-rain-water/) | Hard |
+## Counting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0169-majority-element](https://github.com/jarpit2003/Practice-dsa/tree/main/0169-majority-element/) | Easy |
 <!---LeetCode Topics End-->
