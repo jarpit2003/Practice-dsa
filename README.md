@@ -46,6 +46,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/jarpit2003/Practice-dsa/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/jarpit2003/Practice-dsa/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
 | [0128-longest-consecutive-sequence](https://github.com/jarpit2003/Practice-dsa/tree/main/0128-longest-consecutive-sequence/) | Medium |
+| [0162-find-peak-element](https://github.com/jarpit2003/Practice-dsa/tree/main/0162-find-peak-element/) | Medium |
 | [0169-majority-element](https://github.com/jarpit2003/Practice-dsa/tree/main/0169-majority-element/) | Easy |
 | [0198-house-robber](https://github.com/jarpit2003/Practice-dsa/tree/main/0198-house-robber/) | Medium |
 | [0217-contains-duplicate](https://github.com/jarpit2003/Practice-dsa/tree/main/0217-contains-duplicate/) | Easy |
@@ -153,5 +154,6 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/jarpit2003/Practice-dsa/tree/main/0034-find-first-and-last-position-of-element-in-sorted-array/) | Medium |
 | [0035-search-insert-position](https://github.com/jarpit2003/Practice-dsa/tree/main/0035-search-insert-position/) | Easy |
+| [0162-find-peak-element](https://github.com/jarpit2003/Practice-dsa/tree/main/0162-find-peak-element/) | Medium |
 | [0704-binary-search](https://github.com/jarpit2003/Practice-dsa/tree/main/0704-binary-search/) | Easy |
 <!---LeetCode Topics End-->
