@@ -12,6 +12,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0128-longest-consecutive-sequence](https://github.com/jarpit2003/Practice-dsa/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0141-linked-list-cycle](https://github.com/jarpit2003/Practice-dsa/tree/main/0141-linked-list-cycle/) | Easy |
 | [0169-majority-element](https://github.com/jarpit2003/Practice-dsa/tree/main/0169-majority-element/) | Easy |
+| [0202-happy-number](https://github.com/jarpit2003/Practice-dsa/tree/main/0202-happy-number/) | Easy |
 | [0217-contains-duplicate](https://github.com/jarpit2003/Practice-dsa/tree/main/0217-contains-duplicate/) | Easy |
 | [0242-valid-anagram](https://github.com/jarpit2003/Practice-dsa/tree/main/0242-valid-anagram/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/jarpit2003/Practice-dsa/tree/main/0347-top-k-frequent-elements/) | Medium |
@@ -90,6 +91,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0088-merge-sorted-array](https://github.com/jarpit2003/Practice-dsa/tree/main/0088-merge-sorted-array/) | Easy |
 | [0125-valid-palindrome](https://github.com/jarpit2003/Practice-dsa/tree/main/0125-valid-palindrome/) | Easy |
 | [0141-linked-list-cycle](https://github.com/jarpit2003/Practice-dsa/tree/main/0141-linked-list-cycle/) | Easy |
+| [0202-happy-number](https://github.com/jarpit2003/Practice-dsa/tree/main/0202-happy-number/) | Easy |
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -158,4 +160,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0162-find-peak-element](https://github.com/jarpit2003/Practice-dsa/tree/main/0162-find-peak-element/) | Medium |
 | [0704-binary-search](https://github.com/jarpit2003/Practice-dsa/tree/main/0704-binary-search/) | Easy |
 | [0875-koko-eating-bananas](https://github.com/jarpit2003/Practice-dsa/tree/main/0875-koko-eating-bananas/) | Medium |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0202-happy-number](https://github.com/jarpit2003/Practice-dsa/tree/main/0202-happy-number/) | Easy |
 <!---LeetCode Topics End-->
